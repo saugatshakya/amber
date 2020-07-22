@@ -39,7 +39,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       fillColor: Colors.grey[200],
                       filled: true,
                       border: new UnderlineInputBorder(),
-                      prefixIcon: Icon(Icons.email, color: Colors.orange)),
+                      prefixIcon: Icon(Icons.email, color: Color(0xfff4a925))),
                   keyboardType: TextInputType.emailAddress,
                   style: TextStyle(fontSize: 20),
                 ),
@@ -61,12 +61,12 @@ class _SignUpFormState extends State<SignUpForm> {
                       filled: true,
                       fillColor: Colors.grey[200],
                       border: new UnderlineInputBorder(),
-                      prefixIcon: Icon(Icons.lock, color: Colors.orange),
+                      prefixIcon: Icon(Icons.lock, color: Color(0xfff4a925)),
                       suffixIcon: IconButton(
                           icon: Icon(obscure1
                               ? Icons.visibility
                               : Icons.visibility_off),
-                          color: obscure1 ? Colors.grey : Colors.orange,
+                          color: obscure1 ? Colors.grey : Color(0xfff4a925),
                           onPressed: () {
                             setState(() {
                               obscure1 ? obscure1 = false : obscure1 = true;
@@ -95,11 +95,11 @@ class _SignUpFormState extends State<SignUpForm> {
                       filled: true,
                       fillColor: Colors.grey[200],
                       hintText: "Confirm Password",
-                      prefixIcon: Icon(Icons.lock, color: Colors.orange),
+                      prefixIcon: Icon(Icons.lock, color: Color(0xfff4a925)),
                       suffixIcon: IconButton(
                           icon: Icon(
                             obscure2 ? Icons.visibility : Icons.visibility_off,
-                            color: obscure2 ? Colors.grey : Colors.orange,
+                            color: obscure2 ? Colors.grey : Color(0xfff4a925),
                           ),
                           onPressed: () {
                             setState(() {
@@ -113,7 +113,7 @@ class _SignUpFormState extends State<SignUpForm> {
               Container(
                   width: MediaQuery.of(context).size.width * 0.4,
                   decoration: BoxDecoration(
-                      color: Colors.orange,
+                      color: Color(0xfff4a925),
                       borderRadius: BorderRadius.circular(15)),
                   child: FlatButton(
                       onPressed: () async {
@@ -137,10 +137,11 @@ class _SignUpFormState extends State<SignUpForm> {
                           ? CircularProgressIndicator(
                               valueColor:
                                   AlwaysStoppedAnimation(Colors.grey[800]))
-                          : Text(
-                              "SignUp",
-                              style: TextStyle(fontSize: 20),
-                            )))
+                          : Text("SignUp",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                              ))))
             ],
           ),
         ),

@@ -11,10 +11,10 @@ class _LoginState extends State<Login> {
   List<Color> color = [
     Color(0xfff4a925),
     Colors.grey,
-    Colors.white,
-    Colors.black
+    Colors.black,
+    Colors.white
   ];
-  List<double> size = [0.4, 0.3];
+  List<double> size = [0.5, 0.2];
   bool login = true;
   @override
   Widget build(BuildContext context) {
@@ -37,8 +37,8 @@ class _LoginState extends State<Login> {
                 color: Colors.grey, borderRadius: BorderRadius.circular(20)),
             child: Row(children: [
               AnimatedContainer(
-                  duration: Duration(seconds: 1),
-                  curve: Curves.fastOutSlowIn,
+                  duration: Duration(milliseconds: 500),
+                  curve: Curves.decelerate,
                   width: MediaQuery.of(context).size.width * size[0],
                   decoration: BoxDecoration(
                       color: color[0], borderRadius: BorderRadius.circular(20)),
@@ -46,22 +46,22 @@ class _LoginState extends State<Login> {
                       onPressed: () {
                         setState(() {
                           login = true;
-                          size[0] = 0.4;
-                          size[1] = 0.3;
+                          size[0] = 0.5;
+                          size[1] = 0.2;
                           color[0] = Color(0xfff4a925);
                           color[1] = Colors.grey;
-                          color[2] = Colors.white;
-                          color[3] = Colors.black;
+                          color[2] = Colors.black;
+                          color[3] = Colors.white;
                         });
                       },
                       child: Text("Login",
                           style: TextStyle(
                               decoration: TextDecoration.none,
-                              fontSize: 50 * size[0],
+                              fontSize: 55 * size[0],
                               color: color[3])))),
               AnimatedContainer(
-                  duration: Duration(seconds: 1),
-                  curve: Curves.fastOutSlowIn,
+                  duration: Duration(milliseconds: 500),
+                  curve: Curves.decelerate,
                   width: MediaQuery.of(context).size.width * size[1],
                   decoration: BoxDecoration(
                       color: color[1], borderRadius: BorderRadius.circular(20)),
@@ -69,18 +69,18 @@ class _LoginState extends State<Login> {
                       onPressed: () {
                         setState(() {
                           login = false;
-                          size[0] = 0.3;
-                          size[1] = 0.4;
+                          size[0] = 0.2;
+                          size[1] = 0.5;
                           color[0] = Colors.grey;
                           color[1] = Color(0xfff4a925);
-                          color[2] = Colors.black;
-                          color[3] = Colors.white;
+                          color[2] = Colors.white;
+                          color[3] = Colors.black;
                         });
                       },
                       child: Text("SignUp",
                           style: TextStyle(
                               decoration: TextDecoration.none,
-                              fontSize: 50 * size[1],
+                              fontSize: 55 * size[1],
                               color: color[2]))))
             ])),
         SizedBox(height: 10),
