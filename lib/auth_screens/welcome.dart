@@ -30,7 +30,7 @@ class Welcome extends StatelessWidget {
           SizedBox(height: 10),
           FlatButton(
             onPressed: () {
-              Navigator.popAndPushNamed(context, "AmbulanceList");
+              Navigator.popAndPushNamed(context, "Main");
             },
             child: Text("Sign In Anonomously",
                 style: TextStyle(

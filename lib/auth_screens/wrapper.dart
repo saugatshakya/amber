@@ -1,5 +1,5 @@
-import 'package:amber/ambulance/ambulancelist.dart';
 import 'package:amber/auth_screens/welcome.dart';
+import 'package:amber/main_screens/main.dart';
 import 'package:amber/model/user.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +11,7 @@ class Wrapper extends StatelessWidget {
     if (user == null) {
       return Welcome();
     } else {
-      return AList();
+      return Main();
     }
   }
 }

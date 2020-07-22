@@ -1,6 +1,7 @@
-import 'package:amber/ambulance/ambulancelist.dart';
+import 'package:amber/main_screens/ambulancelist.dart';
 import 'package:amber/auth_screens/login.dart';
 import 'package:amber/auth_screens/wrapper.dart';
+import 'package:amber/main_screens/main.dart';
 import 'package:amber/services/auth_service.dart';
 import 'package:amber/shared/loading.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
             "Login": (context) => Login(),
             "AmbulanceList": (context) => AList(),
             "Wrapper": (context) => Wrapper(),
-            "Loading": (context) => Loading()
+            "Loading": (context) => Loading(),
+            "Main": (context) => Main()
           },
           home: Wrapper()),
     );

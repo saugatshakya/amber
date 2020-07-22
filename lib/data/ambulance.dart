@@ -91,5 +91,4 @@ List ambulance = [
       driverName: "Ambulance Lalitpur Municipality",
       location: "Pulchowk, Lalitpur",
       number: "01-5527003"),
-  Ambulance()
 ];
