@@ -15,28 +15,18 @@ class _AListState extends State<AList> {
       backgroundColor: Colors.grey,
       appBar: AppBar(
         backgroundColor: Colors.grey[800],
+        title: Container(height: 60, child: Image.asset("assets/logo.png")),
+        centerTitle: true,
         actions: [
-          Text("a",
-              style: TextStyle(
-                  fontFamily: "Quicksand",
-                  fontSize: 50,
-                  decoration: TextDecoration.none,
-                  color: Colors.orange)),
-          Text("MBER",
-              style: TextStyle(
-                  fontFamily: "Quicksand",
-                  fontSize: 30,
-                  decoration: TextDecoration.none,
-                  color: Colors.white)),
           FlatButton.icon(
               onPressed: () async {
                 await _auth.signOut();
               },
-              icon: Icon(Icons.person, color: Colors.white, size: 30),
+              icon: Icon(Icons.person, color: Colors.orange[300], size: 30),
               label: Text('logout',
                   style: TextStyle(color: Colors.white, fontSize: 16)))
         ],
-        leading: Icon(Icons.menu),
+        leading: Icon(Icons.menu, color: Colors.orange[300]),
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,

@@ -2,6 +2,7 @@ import 'package:amber/ambulance/ambulancelist.dart';
 import 'package:amber/auth_screens/login.dart';
 import 'package:amber/auth_screens/wrapper.dart';
 import 'package:amber/services/auth_service.dart';
+import 'package:amber/shared/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:amber/auth_screens/welcome.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
             "Welcome": (context) => Welcome(),
             "Login": (context) => Login(),
             "AmbulanceList": (context) => AList(),
-            "Wrapper": (context) => Wrapper()
+            "Wrapper": (context) => Wrapper(),
+            "Loading": (context) => Loading()
           },
           home: Wrapper()),
     );
