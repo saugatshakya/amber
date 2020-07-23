@@ -8,16 +8,20 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  //holds color for the signin and login bar
   List<Color> color = [
     Color(0xfff4a925),
     Colors.grey,
     Colors.black,
     Colors.white
   ];
+  //holds size ratio of signin and login cont
   List<double> size = [0.5, 0.2];
+  //holds the state of either login or signup is enabled
   bool login = true;
   @override
   Widget build(BuildContext context) {
+    //when the keyboard appers reduce the empty space for better visibility
     double height =
         MediaQuery.of(context).viewInsets.bottom == 0.0 ? 0.3 : 0.02;
     return Container(
@@ -31,11 +35,13 @@ class _LoginState extends State<Login> {
           height: 150,
         ),
         SizedBox(height: MediaQuery.of(context).size.height * height),
+        //cont that handles the state of login or signup
         Container(
             width: MediaQuery.of(context).size.width * 0.7,
             decoration: BoxDecoration(
                 color: Colors.grey, borderRadius: BorderRadius.circular(20)),
             child: Row(children: [
+              //cont that changes the val of login to true on pressed
               AnimatedContainer(
                   duration: Duration(milliseconds: 500),
                   curve: Curves.decelerate,
@@ -45,6 +51,7 @@ class _LoginState extends State<Login> {
                   child: FlatButton(
                       onPressed: () {
                         setState(() {
+                          // changing the state and the colors and size of login and signup cont button
                           login = true;
                           size[0] = 0.5;
                           size[1] = 0.2;
@@ -59,6 +66,7 @@ class _LoginState extends State<Login> {
                               decoration: TextDecoration.none,
                               fontSize: 55 * size[0],
                               color: color[3])))),
+              //cont that changes the val of login to false when pressed
               AnimatedContainer(
                   duration: Duration(milliseconds: 500),
                   curve: Curves.decelerate,
@@ -68,6 +76,7 @@ class _LoginState extends State<Login> {
                   child: FlatButton(
                       onPressed: () {
                         setState(() {
+                          // changing the state and the colors and size of login and signup cont button
                           login = false;
                           size[0] = 0.2;
                           size[1] = 0.5;
@@ -84,6 +93,7 @@ class _LoginState extends State<Login> {
                               color: color[2]))))
             ])),
         SizedBox(height: 10),
+        //shows login or signup form after checing the state of login
         login ? LoginForm() : SignUpForm()
       ]),
     );

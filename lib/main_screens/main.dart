@@ -12,9 +12,11 @@ class Main extends StatefulWidget {
 
 class _MainState extends State<Main> {
   final AuthService _auth = AuthService();
+  //initialize the pressed with false to show the ambulance page
   bool pressed = false;
   @override
   Widget build(BuildContext context) {
+    //find the current user
     final user = Provider.of<User>(context);
     return Scaffold(
         backgroundColor: Colors.grey,
@@ -25,6 +27,7 @@ class _MainState extends State<Main> {
             actions: [
               FlatButton.icon(
                   onPressed: () async {
+                    //if user is not null signout or else pop and go to welcome screen
                     if (user == null) {
                       Navigator.popAndPushNamed(context, "Welcome");
                     } else
@@ -35,16 +38,19 @@ class _MainState extends State<Main> {
                       style: TextStyle(color: Colors.white, fontSize: 16)))
             ],
             leading: IconButton(
+                //show icon according to state of pressed
                 icon: Icon(pressed
                     ? Icons.keyboard_arrow_left
                     : Icons.keyboard_arrow_right),
                 onPressed: () {
+                  //change the state of pressed
                   setState(() {
                     pressed ? pressed = false : pressed = true;
                   });
                 })),
         body: Stack(
           children: [
+            //ambulance page if pressed is false and medicine page is pressed is true
             AnimatedContainer(
               duration: Duration(seconds: 1),
               curve: Curves.fastOutSlowIn,

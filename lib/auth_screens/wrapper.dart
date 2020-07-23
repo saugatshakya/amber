@@ -8,6 +8,7 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
+    //check whether user is signed in or not and show either welcome screen or main screen
     if (user == null) {
       return Welcome();
     } else {

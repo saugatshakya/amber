@@ -8,7 +8,6 @@ class AList extends StatefulWidget {
 }
 
 class _AListState extends State<AList> {
-  List<int> itemState = [0, 0, 0, 0];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,6 +19,7 @@ class _AListState extends State<AList> {
             color: Colors.grey[800],
             borderRadius: BorderRadius.vertical(top: Radius.circular(40))),
         child: ListView.builder(
+          //build a list with ambulances from list of ambulance
           itemCount: ambulance.length,
           itemBuilder: (context, index) {
             return Column(children: [
@@ -33,6 +33,7 @@ class _AListState extends State<AList> {
                 )),
                 children: [
                   GestureDetector(
+                    //show a detail of this ambulance
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => Adetail(

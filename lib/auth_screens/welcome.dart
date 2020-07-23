@@ -20,6 +20,7 @@ class Welcome extends StatelessWidget {
               width: MediaQuery.of(context).size.width - 30,
               child: FlatButton(
                   onPressed: () {
+                    //go to login screen
                     Navigator.pushNamed(context, "Login");
                   },
                   child: Text("Login / SignUp",
@@ -30,6 +31,7 @@ class Welcome extends StatelessWidget {
           SizedBox(height: 10),
           FlatButton(
             onPressed: () {
+              //go directly to list of ambulance
               Navigator.popAndPushNamed(context, "Main");
             },
             child: Text("Sign In Anonomously",
