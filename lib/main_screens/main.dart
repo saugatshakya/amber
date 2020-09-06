@@ -33,15 +33,18 @@ class _MainState extends State<Main> {
                     } else
                       await _auth.signOut();
                   },
-                  icon: Icon(Icons.person, color: Colors.orange[300], size: 30),
+                  icon: Icon(Icons.person, color: Color(0xfff4a925), size: 30),
                   label: Text('logout',
                       style: TextStyle(color: Colors.white, fontSize: 16)))
             ],
             leading: IconButton(
                 //show icon according to state of pressed
-                icon: Icon(pressed
-                    ? Icons.keyboard_arrow_left
-                    : Icons.keyboard_arrow_right),
+                icon: Icon(
+                  pressed
+                      ? Icons.keyboard_arrow_left
+                      : Icons.keyboard_arrow_right,
+                  color: Color(0xfff4a925),
+                ),
                 onPressed: () {
                   //change the state of pressed
                   setState(() {

@@ -27,7 +27,7 @@ class Adetail extends StatelessWidget {
                     } else
                       await _auth.signOut();
                   },
-                  icon: Icon(Icons.person, color: Colors.orange[300], size: 30),
+                  icon: Icon(Icons.person, color: Color(0xfff4a925), size: 30),
                   label: Text('logout',
                       style: TextStyle(color: Colors.white, fontSize: 16)))
             ],

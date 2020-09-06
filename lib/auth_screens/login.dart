@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
     Colors.white
   ];
   //holds size ratio of signin and login cont
-  List<double> size = [0.5, 0.2];
+  List<double> size = [0.51, 0.21];
   //holds the state of either login or signup is enabled
   bool login = true;
   @override
@@ -37,13 +37,13 @@ class _LoginState extends State<Login> {
         SizedBox(height: MediaQuery.of(context).size.height * height),
         //cont that handles the state of login or signup
         Container(
-            width: MediaQuery.of(context).size.width * 0.7,
+            width: MediaQuery.of(context).size.width * 0.72,
             decoration: BoxDecoration(
                 color: Colors.grey, borderRadius: BorderRadius.circular(20)),
             child: Row(children: [
               //cont that changes the val of login to true on pressed
               AnimatedContainer(
-                  duration: Duration(milliseconds: 500),
+                  duration: Duration(milliseconds: 300),
                   curve: Curves.decelerate,
                   width: MediaQuery.of(context).size.width * size[0],
                   decoration: BoxDecoration(
@@ -53,8 +53,8 @@ class _LoginState extends State<Login> {
                         setState(() {
                           // changing the state and the colors and size of login and signup cont button
                           login = true;
-                          size[0] = 0.5;
-                          size[1] = 0.2;
+                          size[0] = 0.51;
+                          size[1] = 0.21;
                           color[0] = Color(0xfff4a925);
                           color[1] = Colors.grey;
                           color[2] = Colors.black;
@@ -68,7 +68,7 @@ class _LoginState extends State<Login> {
                               color: color[3])))),
               //cont that changes the val of login to false when pressed
               AnimatedContainer(
-                  duration: Duration(milliseconds: 500),
+                  duration: Duration(milliseconds: 300),
                   curve: Curves.decelerate,
                   width: MediaQuery.of(context).size.width * size[1],
                   decoration: BoxDecoration(
@@ -78,8 +78,8 @@ class _LoginState extends State<Login> {
                         setState(() {
                           // changing the state and the colors and size of login and signup cont button
                           login = false;
-                          size[0] = 0.2;
-                          size[1] = 0.5;
+                          size[0] = 0.21;
+                          size[1] = 0.51;
                           color[0] = Colors.grey;
                           color[1] = Color(0xfff4a925);
                           color[2] = Colors.white;

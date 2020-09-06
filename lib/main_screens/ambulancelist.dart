@@ -44,7 +44,7 @@ class _AListState extends State<AList> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Container(
-                              width: 200,
+                              width: 100,
                               child: Text(
                                 ambulance[index].location +
                                     " " +

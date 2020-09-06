@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
             "Loading": (context) => Loading(),
             "Main": (context) => Main()
           },
-          home: Wrapper()),
+          home: Loading()),
     );
   }
 }
