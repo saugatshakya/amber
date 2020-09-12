@@ -1,4 +1,3 @@
-import 'package:amber/main_screens/ambulancelist.dart';
 import 'package:amber/auth_screens/login.dart';
 import 'package:amber/auth_screens/wrapper.dart';
 import 'package:amber/main_screens/main.dart';
@@ -23,7 +22,6 @@ class MyApp extends StatelessWidget {
           routes: {
             "Welcome": (context) => Welcome(),
             "Login": (context) => Login(),
-            "AmbulanceList": (context) => AList(),
             "Wrapper": (context) => Wrapper(),
             "Loading": (context) => Loading(),
             "Main": (context) => Main()
