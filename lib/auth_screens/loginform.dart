@@ -1,3 +1,4 @@
+import 'package:amber/auth_screens/forgot_password.dart';
 import 'package:amber/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -126,5 +127,17 @@ class _LoginFormState extends State<LoginForm> {
         ),
       ),
     );
+    SizedBox(
+      height: 10,
+    ),
+    GestureDetector(
+      child: Container(
+        alignment: Alignment.bottomCenter,
+        child: Text("Forgot Password?")),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (_) => ForgotPasswordScreen()));
+      },
+    )
   }
 }
